@@ -29,7 +29,8 @@ export function useMovies(query) {
           setError("");
         } catch (err) {
           if (!err.name !== "AbortError") {
-            console.error(err.message);
+            // removed to prevent unwanted errors in console
+            // console.error(err.message);
             setError(err.message);
           }
         } finally {
